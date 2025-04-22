@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from "react-router-dom"
 import logoCafe from "../assets/logo-cafe.png";
 
 function Navbar() {
@@ -8,17 +9,17 @@ function Navbar() {
             <div className="flex flex-row justify-between w-full items-center">
                 <img className="h-full max-h-24" src={logoCafe} alt="Logo Cozy Cafe" />
                 <ul className="flex space-x-15 ml-72">
-                    <a href="#"><li className="text-white hover:text-yellow-400 cursor-pointer">Home</li></a>
-                    <a href="#"><li className="text-white hover:text-yellow-400 cursor-pointer">Menu</li></a>
-                    <a href="#"><li className="text-white hover:text-yellow-400 cursor-pointer">About</li></a>
-                    <a href="#"><li className="text-white hover:text-yellow-400 cursor-pointer">Gallery</li></a>
-                    <a href="#"><li className="text-white hover:text-yellow-400 cursor-pointer">Contact</li></a>
+                    <li className="text-white hover:text-yellow-400 cursor-pointer"><Link to={"/Home"}>Home</Link></li>
+                    <li className="text-white hover:text-yellow-400 cursor-pointer"><Link to={"/Menu"}>Menu</Link></li>
+                    <li className="text-white hover:text-yellow-400 cursor-pointer"><Link to={"/About"}>About</Link></li>
+                    <li className="text-white hover:text-yellow-400 cursor-pointer"><Link to={"/Gallery"}>Gallery</Link></li>
+                    <li className="text-white hover:text-yellow-400 cursor-pointer"><Link to={"/Contact"}>Contact</Link></li>
                 </ul>
-                <a href="#">
+                <Link to={"/Reservation"}>
                     <button className="bg-yellow-500 py-2 px-4 ml-6 text-black rounded-sm hover:bg-yellow-600">
-                      Reservation
+                        Reservation
                     </button>
-                </a>
+                </Link>
             </div>
         </nav>
         </>
