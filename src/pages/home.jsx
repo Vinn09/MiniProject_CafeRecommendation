@@ -2,7 +2,9 @@ import { useState } from 'react'
 import fotoAbout from "../assets/foto-about.jpg";
 import customer from "../assets/cust-1.jpg";
 import Navbar from "../components/navbar";
-import Footer from "../components/footer"
+import Footer from "../components/footer";
+import Testimonial from '../components/testimonial';
+import Features from '../components/features';
 
 function Home() {
 
@@ -63,26 +65,10 @@ function Home() {
     <section class="mt-8 p-8">
         <h2 class="font-bold text-4xl mb-12 text-center">Why Choose Cozy Cafe</h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div class="flex flex-col items-center">
-                <img class="w-30 h-30 mb-8 opacity-50" src="https://cdn-icons-png.flaticon.com/512/751/751621.png" alt="" />
-                <h3 class="font-semibold text-2xl">Premium Coffe</h3>
-                <p class="text-center">Freshly brewed with high-quality beans for the perfect cup.</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-30 h-30 mb-8 opacity-50" src="https://cdn-icons-png.flaticon.com/512/562/562678.png" alt="" />
-                <h3 class="font-semibold text-2xl">Delicious Meals</h3>
-                <p class="text-center">Freshly brewed with high-quality beans for the perfect cup.</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-30 h-30 mb-8 opacity-50" src="https://cdn-icons-png.flaticon.com/512/1974/1974058.png" alt="" />
-                <h3 class="font-semibold text-2xl">Relaxing Ambiance</h3>
-                <p class="text-center">A cozy, stylish space designed for comfort and enjoyment.</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-30 h-30 mb-8 opacity-50" src="https://cdn-icons-png.flaticon.com/512/1067/1067566.png" alt=""></img>
-                <h3 class="font-semibold text-2xl">Friendly Service</h3>
-                <p class="text-center">Our team is dedicated to making you feel at home.</p>
-            </div>
+            <Features image ="https://cdn-icons-png.flaticon.com/512/751/751621.png" feature="Premium Coffe" desc="Freshly brewed with high-quality beans for the perfect cup." />
+            <Features image ="https://cdn-icons-png.flaticon.com/512/562/562678.png" feature="Delicious Meals" desc="Freshly brewed with high-quality beans for the perfect cup." />
+            <Features image ="https://cdn-icons-png.flaticon.com/512/1974/1974058.png" feature="Relaxing Ambiance" desc="A cozy, stylish space designed for comfort and enjoyment." />
+            <Features image ="https://cdn-icons-png.flaticon.com/512/1067/1067566.png" feature="Friendly Service" desc="Our team is dedicated to making you feel at home." />
         </div>
         
     </section>
@@ -90,45 +76,9 @@ function Home() {
     <section class="mt-8">
         <h2 class="font-bold text-4xl mb-12 text-center">What Our Customers Say About Cozy Cafe</h2>
         <div class="m-8 grid grid-cols-1 md:grid-cols-3 gap-6">    
-            <div class="bg-gray-300 p-4 rounded-2xl">
-                <div class="flex items-center space-x-4">
-                    <img class="w-16 h-16 rounded-full border" src={customer} alt="" />
-                    <div>
-                        <p class="font-semibold">Sarah Angelia</p>
-                        <p>Rate: 4.5/5.0</p>
-                    </div>
-                </div>
-                <div class="mt-4">"Cozy Cafe is my go-to place for coffee and good food! The
-                    atmosphere is warm and inviting, perfect for working or just relaxing. 
-                    Their cappuccino is a must-try!"
-                </div>
-            </div>
-            <div class="bg-gray-300 p-4 rounded-2xl">
-                <div class="flex items-center space-x-4">
-                    <img class="w-16 h-16 rounded-full border" src={customer} alt="" />
-                    <div>
-                        <p class="font-semibold">Sarah Angelia</p>
-                        <p>Rate: 4.5/5.0</p>
-                    </div>
-                </div>
-                <div class="mt-4">"Cozy Cafe is my go-to place for coffee and good food! The
-                    atmosphere is warm and inviting, perfect for working or just relaxing. 
-                    Their cappuccino is a must-try!"
-                </div>
-            </div>
-            <div class="bg-gray-300 p-4 rounded-2xl">
-                <div class="flex items-center space-x-4">
-                    <img class="w-16 h-16 rounded-full border" src={customer} alt="" />
-                    <div>
-                        <p class="font-semibold">Sarah Angelia</p>
-                        <p>Rate: 4.5/5.0</p>
-                    </div>
-                </div>
-                <div class="mt-4">"Cozy Cafe is my go-to place for coffee and good food! The
-                    atmosphere is warm and inviting, perfect for working or just relaxing. 
-                    Their cappuccino is a must-try!"
-                </div>
-            </div>
+            <Testimonial image={customer} name="Sarah Angelia" rate="4.5" review="Cozy Cafe is my go-to place for coffee and good food! The atmosphere is warm and inviting, perfect for working or just relaxing. Their cappuccino is a must-try!" />
+            <Testimonial image={customer} name="Sarah Angelia" rate="4.5" review="Cozy Cafe is my go-to place for coffee and good food! The atmosphere is warm and inviting, perfect for working or just relaxing. Their cappuccino is a must-try!" />
+            <Testimonial image={customer} name="Sarah Angelia" rate="4.5" review="Cozy Cafe is my go-to place for coffee and good food! The atmosphere is warm and inviting, perfect for working or just relaxing. Their cappuccino is a must-try!" />
         </div>
     </section>
 

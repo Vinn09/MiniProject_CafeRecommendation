@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import fotoAbout from "../assets/foto-about.jpg"
+import Features from '../components/features';
 
 function About() {
     return (
@@ -83,26 +84,10 @@ function About() {
         <section class="mt-8 p-8">
             <h2 class="font-bold text-4xl mb-12 text-center">Why Choose Cozy Cafe?</h2>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="flex flex-col items-center">
-                    <img class="w-30 h-30 mb-8 opacity-50" src="https://cdn-icons-png.flaticon.com/512/751/751621.png" alt="" />
-                    <h3 class="font-semibold text-2xl">Premium Coffe</h3>
-                    <p class="text-center">Freshly brewed with high-quality beans for the perfect cup.</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img class="w-30 h-30 mb-8 opacity-50" src="https://cdn-icons-png.flaticon.com/512/562/562678.png" alt="" />
-                    <h3 class="font-semibold text-2xl">Delicious Meals</h3>
-                    <p class="text-center">Freshly brewed with high-quality beans for the perfect cup.</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img class="w-30 h-30 mb-8 opacity-50" src="https://cdn-icons-png.flaticon.com/512/1974/1974058.png" alt="" />
-                    <h3 class="font-semibold text-2xl">Relaxing Ambiance</h3>
-                    <p class="text-center">A cozy, stylish space designed for comfort and enjoyment.</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img class="w-30 h-30 mb-8 opacity-50" src="https://cdn-icons-png.flaticon.com/512/1067/1067566.png" alt="" />
-                    <h3 class="font-semibold text-2xl">Friendly Service</h3>
-                    <p class="text-center">Our team is dedicated to making you feel at home.</p>
-                </div>
+                <Features image ="https://cdn-icons-png.flaticon.com/512/751/751621.png" feature="Premium Coffe" desc="Freshly brewed with high-quality beans for the perfect cup." />
+                <Features image ="https://cdn-icons-png.flaticon.com/512/562/562678.png" feature="Delicious Meals" desc="Freshly brewed with high-quality beans for the perfect cup." />
+                <Features image ="https://cdn-icons-png.flaticon.com/512/1974/1974058.png" feature="Relaxing Ambiance" desc="A cozy, stylish space designed for comfort and enjoyment." />
+                <Features image ="https://cdn-icons-png.flaticon.com/512/1067/1067566.png" feature="Friendly Service" desc="Our team is dedicated to making you feel at home." />
             </div>
         </section>
 
